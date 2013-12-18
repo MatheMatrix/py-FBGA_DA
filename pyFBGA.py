@@ -53,6 +53,8 @@ class PyFBGA():
               -1 if Failed
         '''
 
+        self.time = time.ctime()
+
         return self.dll.FBGA_GetSensorVal(self.pData, self.pCount)
 
     def disconnect(self):
@@ -65,7 +67,7 @@ class PyFBGA():
         '''trans data from struct_array to list
         '''
 
-        self.lData = [time.ctime()]
+        self.lData = [self.time]
         for i in self.data:
             self.lData.append((i.nSensorNumber,
                                i.fWaveLen,
