@@ -3,6 +3,7 @@ import time
 
 
 class PyFBGA():
+
     '''Rewrite functions in FBGA_DA.dll
 
     Make a class to simplify working with FBGA_DA.dll
